@@ -63,6 +63,9 @@ mod imp {
                 window.upcast()
             };
 
+            // Disable the calculate button on startup
+            window.action_set_enabled("app.calculate_bmi", false);
+
             // Ask the window manager/compositor to present the window
             window.present();
         }
@@ -90,10 +93,16 @@ impl BmicalculatorApplication {
         let quit_action = gio::ActionEntry::builder("quit")
             .activate(move |app: &Self, _, _| app.quit())
             .build();
+
         let about_action = gio::ActionEntry::builder("about")
             .activate(move |app: &Self, _, _| app.show_about())
             .build();
-        self.add_action_entries([quit_action, about_action]);
+
+        let calculate_bmi_action = gio::ActionEntry::builder("calculate_bmi")
+            .activate(move |app: &Self, _, _| app.calculate_bmi())
+            .build();
+
+        self.add_action_entries([quit_action, about_action, calculate_bmi_action]);
     }
 
     fn show_about(&self) {
@@ -118,4 +127,12 @@ impl BmicalculatorApplication {
 
         about_dialog.present(&window);
     }
+
+    fn calculate_bmi(&self) {
+        let window = self.active_window().unwrap();
+        let bmi_calculator_window = window.downcast::<BmicalculatorWindow>().unwrap();
+
+
+    }
+
 }

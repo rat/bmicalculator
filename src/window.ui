@@ -23,8 +23,6 @@
         </child>
         <property name="content">
 
-
-
           <object class="GtkBox" id="content">
             <property name="visible">True</property>
             <property name="margin-start">12</property>
@@ -48,14 +46,14 @@
                 <child>
                   <object class="AdwEntryRow" id="entry_weight">
                     <property name="title" translatable="yes">Weight (in kg)</property>
-                    <!--<signal name="notify::text" handler="validate_entry_weight" swapped="true" />-->
+                    <signal name="notify::text" handler="validate_entry_weight" swapped="true" />
                   </object>
                 </child>
 
                 <child>
                   <object class="AdwEntryRow" id="entry_height">
                     <property name="title" translatable="yes">Height (in cm)</property>
-                    <!--<signal name="notify::text" handler="validate_entry_height" swapped="true" />-->
+                    <signal name="notify::text" handler="validate_entry_height" swapped="true" />
                   </object>
                 </child>
 
@@ -329,14 +327,14 @@
                               <class name="bmi_scale_overweight2"/>
                             </style>
                             <child>
-			                        <object class="GtkLabel">
-			                          <property name="label" translatable="yes">35.0</property>
-			                          <property name="margin-top">0</property>
-			                          <property name="justify">left</property>
-			                          <style>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">35.0</property>
+                                <property name="margin-top">0</property>
+                                <property name="justify">left</property>
+                                <style>
 
-			                          </style>
-			                        </object>
+                                </style>
+                              </object>
                             </child>
                           </object>
                         </child>
@@ -432,10 +430,10 @@
     </columns>
     <data>
       <row>
-        <col translatable="yes">Male</col>
+        <col id="0" translatable="yes">Male</col>
       </row>
       <row>
-        <col translatable="yes">Female</col>
+        <col id="0" translatable="yes">Female</col>
       </row>
     </data>
   </object>
