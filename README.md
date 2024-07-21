@@ -1,8 +1,8 @@
-<div style="text-align: center;">
-![](./data/icons/hicolor/scalable/apps/app.schubidu.BmiCalculator.svg)
+
+![](data/icons/hicolor/scalable/apps/app.schubidu.BmiCalculator.svg)
 
 # BMI Calculator
-</div>
+
 
 ## Features
 - feature 001
