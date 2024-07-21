@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2024 Johannes Böhler -->
 <component type="desktop">
-	<id>app.schubidu.BmiCalculator.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
-	<description>
-	  <p>No description</p>
-	</description>
+  <id>app.schubidu.BmiCalculator.desktop</id>
+
+  <name>BMI Calculator</name>
+  <summary>Calculate your BMI</summary>
+
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <!-- TODO add website -->
+  <launchable type="desktop-id">app.schubidu.bmicalculator.desktop</launchable>
+
+  <content_rating type="oars-1.0" />
+
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </recommends>
+
+  <description>
+    <p>Calculate the BMI with:</p><!-- TODO -->
+    <ul>
+      <li>Weight</li>
+      <li>Height</li>
+      <li>Gender</li>
+    </ul>
+  </description>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#5bbaff</color>
+    <color type="primary" scheme_preference="dark">#225490</color>
+  </branding>
+
+  <custom>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-normal-weight.png</image>
+      <caption>Dark style</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-normal-weight.png</image>
+      <caption>Light style</caption>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.1.1" date="2024-02-28">
+      <url type="details">https://example.org/changelog.html#version_1.0.1</url><!-- TODO -->
+      <description>
+        <p>Add new app icon</p>
+      </description>
+    </release>
+    <release version="0.1.0" date="2024-02-28">
+      <url type="details">https://example.org/changelog.html#version_1.0.1</url><!-- TODO -->
+      <description>
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
+
 </component>
