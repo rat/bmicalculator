@@ -1,0 +1,4 @@
+data/app.schubidu.BmiCalculator.desktop.in
+data/app.schubidu.BmiCalculator.metainfo.xml.in
+data/app.schubidu.BmiCalculator.gschema.xml
+src/window.ui

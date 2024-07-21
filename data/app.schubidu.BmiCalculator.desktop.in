@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=bmicalculator
+Exec=bmicalculator
+Icon=app.schubidu.BmiCalculator
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
