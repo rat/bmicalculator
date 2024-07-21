@@ -1,0 +1,112 @@
+sheet.background {
+  background-color: rgba(250,250,250, 0.9);
+}
+
+label.bmi_result {
+  font-size: 38px;
+  font-weight: normal;
+  background-color: rgba(0,0,0, 0.05);
+  border-radius: 10px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-bottom: 2px;
+  min-width: 46px;
+  opacity: 0.3;
+  border: 1px solid transparent;
+  transition: box-shadow 0.12s, border 0.12s;
+}
+
+
+label.bmi_result.underweight {
+  opacity: 1;
+  border: 1px solid #7c7cfc;
+  box-shadow: 0px 0px 220px rgba(124,124,252, 1.0), 0px 0px 45px rgba(124,124,252, 0.8);
+}
+
+label.bmi_result.normal_weight {
+  opacity: 1;
+  border: 1px solid #00aa00;
+  box-shadow: 0px 0px 220px rgba(0,170,0, 1.0), 0px 0px 45px rgba(0,170,0, 0.8);
+}
+
+label.bmi_result.overweight {
+  opacity: 1;
+  border: 1px solid #e7b632;
+  box-shadow: 0px 0px 220px rgba(231,182,50, 1.0), 0px 0px 45px rgba(231,182,50, 0.8);
+}
+
+label.bmi_result.overweight1 {
+  opacity: 1;
+  border: 1px solid #ff8b66;
+  box-shadow: 0px 0px 220px rgba(255,139,102, 1.0), 0px 0px 45px rgba(255,139,102, 0.8);
+}
+
+label.bmi_result.overweight2 {
+  opacity: 1;
+  border: 1px solid #ee6080;
+  box-shadow: 0px 0px 220px rgba(238,96,128, 1.0), 0px 0px 45px rgba(238,96,128, 0.8);
+}
+
+label.bmi_result.overweight3 {
+  opacity: 1;
+  border: 1px solid #cc0080;
+  box-shadow: 0px 0px 220px rgba(204,0,128, 1.0), 0px 0px 45px rgba(204,0,128, 0.8);
+}
+
+
+box.bmi_scale {
+  border-radius: 6px;
+  line-height: 0;
+  font-size: 0px;
+}
+
+box.bmi_scale box.bmi_scale_underweight {
+  background-color: #7c7cfc;
+  border-radius: 6px 0px 0px 6px;
+}
+
+box.bmi_scale box.bmi_scale_normal_weight {
+  background-color: #00aa00;
+}
+
+box.bmi_scale_numbers box.bmi_scale_normal_weight {
+  color: #00aa00;
+}
+
+box.bmi_scale box.bmi_scale_overweight {
+  background-color: #e7b632;
+}
+
+box.bmi_scale_numbers box.bmi_scale_overweight {
+  color: #e7b632;
+}
+
+box.bmi_scale box.bmi_scale_overweight1 {
+  background-color: #ff8b66;
+}
+
+box.bmi_scale_numbers box.bmi_scale_overweight1 {
+  color: #ff8b66;
+}
+
+box.bmi_scale box.bmi_scale_overweight2 {
+  background-color: #ee6080;
+}
+
+box.bmi_scale_numbers box.bmi_scale_overweight2 {
+  color: #ee6080;
+}
+
+box.bmi_scale box.bmi_scale_overweight3 {
+  background-color: #cc0080;
+  border-radius: 0px 6px 6px 0px;
+}
+
+box.bmi_scale_numbers box.bmi_scale_overweight3 {
+  color: #cc0080;
+}
+
+
+label.bmi_result_description span {
+  font-weight: normal;
+}

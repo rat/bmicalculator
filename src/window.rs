@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-use gtk::prelude::*;
+
 use adw::subclass::prelude::*;
 use gtk::{gio, glib};
 use crate::IsA;
@@ -32,8 +32,6 @@ mod imp {
         // Template widgets
         #[template_child]
         pub header_bar: TemplateChild<adw::HeaderBar>,
-        #[template_child]
-        pub label: TemplateChild<gtk::Label>,
     }
 
     #[glib::object_subclass]
