@@ -133,6 +133,84 @@ impl BmicalculatorApplication {
         let bmi_calculator_window = window.downcast::<BmicalculatorWindow>().unwrap();
 
 
+        // Get the form data
+
+        let entry_weight = &bmi_calculator_window.imp().entry_weight.get();
+        let entry_height = &bmi_calculator_window.imp().entry_height.get();
+        let gender = &bmi_calculator_window.imp().gender.get();
+
+        let weight = &entry_weight.text().parse::<f32>().unwrap();
+        let height = &entry_height.text().parse::<f32>().unwrap();
+        let gender_index_value = &gender.property_value ("selected");
+        let gender_index_int: u32 = gender_index_value.get::<u32>().unwrap();
+
+
+        // Calculate and show the result
+
+        let bmi_result = ((weight / ((height / 100_f32) * (height / 100_f32))) * 10_f32).floor() / 10_f32;
+        let _ = &bmi_calculator_window.imp().bmi_result.set_text(&format!("{}", bmi_result));
+
+
+        // Find out the result color and the result text
+
+        let mut bmi_result_scale_marker_margin: f32 = 0.0;
+        let mut bmi_result_css_class = "";
+        let bmi_result_description_who = "";
+
+
+        if bmi_result < 18.5 {
+            // TODO set text
+            bmi_result_css_class = "underweight";
+            bmi_result_scale_marker_margin = (56.0 / 8.0 * (bmi_result - 18.5)) + 56.0 - 13.0;
+
+            if bmi_result_scale_marker_margin < 0.0 {
+                bmi_result_scale_marker_margin = 0.0;
+            }
+
+        } else if bmi_result >= 18.5 && bmi_result <= 24.9 {
+            // TODO set text
+            bmi_result_css_class = "normal_weight";
+            bmi_result_scale_marker_margin = (56.0 / (24.9 - 18.5) * (bmi_result - 18.5)) + 56.0 - 13.0;
+
+        } else if bmi_result >= 25.0 && bmi_result <= 29.9 {
+            // TODO set text
+            bmi_result_css_class = "overweight";
+            bmi_result_scale_marker_margin = (56.0 / (29.9 - 25.0) * (bmi_result - 25.0)) + 56.0 * 2.0 - 13.0;
+
+        } else if bmi_result >= 30.0 && bmi_result <= 34.9 {
+            // TODO set text
+            bmi_result_css_class = "overweight1";
+            bmi_result_scale_marker_margin = (56.0 / (34.9 - 30.0) * (bmi_result - 30.0)) + 56.0 * 3.0 - 13.0;
+
+        } else if bmi_result >= 35.0 && bmi_result <= 39.9 {
+            // TODO set text
+            bmi_result_css_class = "overweight2";
+            bmi_result_scale_marker_margin = (56.0 / (39.9 - 35.0) * (bmi_result - 35.0)) + 56.0 * 4.0 - 13.0;
+
+        } else if bmi_result >= 40.0 {
+            // TODO set text
+            bmi_result_css_class = "overweight3";
+            bmi_result_scale_marker_margin = (56.0 / (60.0 - 40.0) * (bmi_result - 40.0)) + 56.0 * 5.0 - 13.0;
+
+            if bmi_result_scale_marker_margin > 310.0 {
+                bmi_result_scale_marker_margin = 310.0;
+            }
+        }
+
+
+        // Set color and text
+
+        let _ = &bmi_calculator_window.imp().bmi_result_description_who.set_markup(bmi_result_description_who);
+        let _ = &bmi_calculator_window.imp().bmi_result.get().set_css_classes(&["bmi_result", bmi_result_css_class]);
+
+        bmi_result_scale_marker_margin = bmi_result_scale_marker_margin.floor();
+        let _ = &bmi_calculator_window.imp().bmi_scale_marker.get().set_margin_start(bmi_result_scale_marker_margin as i32);
+        let _ = &bmi_calculator_window.imp().bmi_scale_marker.get().set_opacity(1.0);
+
+
+        // TODO Set the DGE result text and colors
+
+
     }
 
 }
