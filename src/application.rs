@@ -119,8 +119,7 @@ impl BmicalculatorApplication {
         about_dialog.set_developers(&["Johannes Böhler"]);
         about_dialog.set_copyright("© 2024 Johannes Böhler");
 
-        // TODO add wwebsite
-        // about_dialog.set_website("https://www.schubidu.app/bmicalculator");
+        about_dialog.set_website("https://github.com/johannesboehler2/bmicalculator");
         about_dialog.set_release_notes("
 	    <p>Add new app icon</p>
       	");
@@ -155,42 +154,42 @@ impl BmicalculatorApplication {
 
         let mut bmi_result_scale_marker_margin: f32 = 0.0;
         let mut bmi_result_css_class = "";
-        let bmi_result_description_who = "";
+        let mut bmi_result_description_who = "";
 
 
         if bmi_result < 18.5 {
-            // TODO set text
             bmi_result_css_class = "underweight";
             bmi_result_scale_marker_margin = (56.0 / 8.0 * (bmi_result - 18.5)) + 56.0 - 13.0;
+            bmi_result_description_who = "<span color='#7c7cfc' weight='normal'>Underweight</span>\n<span size='x-small'>WHO</span>";
 
             if bmi_result_scale_marker_margin < 0.0 {
                 bmi_result_scale_marker_margin = 0.0;
             }
 
         } else if bmi_result >= 18.5 && bmi_result <= 24.9 {
-            // TODO set text
             bmi_result_css_class = "normal_weight";
             bmi_result_scale_marker_margin = (56.0 / (24.9 - 18.5) * (bmi_result - 18.5)) + 56.0 - 13.0;
+            bmi_result_description_who = "<span color='#00aa00' weight='normal'>Normal range</span>\n<span size='x-small'>WHO</span>";
 
         } else if bmi_result >= 25.0 && bmi_result <= 29.9 {
-            // TODO set text
             bmi_result_css_class = "overweight";
             bmi_result_scale_marker_margin = (56.0 / (29.9 - 25.0) * (bmi_result - 25.0)) + 56.0 * 2.0 - 13.0;
+            bmi_result_description_who = "<span color='#e7b632' weight='normal'>Overweight</span>\n<span size='x-small'>WHO</span>";
 
         } else if bmi_result >= 30.0 && bmi_result <= 34.9 {
-            // TODO set text
             bmi_result_css_class = "overweight1";
             bmi_result_scale_marker_margin = (56.0 / (34.9 - 30.0) * (bmi_result - 30.0)) + 56.0 * 3.0 - 13.0;
+            bmi_result_description_who = "<span color='#ff8b66' weight='normal'>Obese (Class I)</span>\n<span size='x-small'>WHO</span>";
 
         } else if bmi_result >= 35.0 && bmi_result <= 39.9 {
-            // TODO set text
             bmi_result_css_class = "overweight2";
             bmi_result_scale_marker_margin = (56.0 / (39.9 - 35.0) * (bmi_result - 35.0)) + 56.0 * 4.0 - 13.0;
+            bmi_result_description_who = "<span color='#ee6080' weight='normal'>Obese (Class II)</span>\n<span size='x-small'>WHO</span>";
 
         } else if bmi_result >= 40.0 {
-            // TODO set text
             bmi_result_css_class = "overweight3";
             bmi_result_scale_marker_margin = (56.0 / (60.0 - 40.0) * (bmi_result - 40.0)) + 56.0 * 5.0 - 13.0;
+            bmi_result_description_who = "<span color='#cc0080' weight='normal'>Obese (Class III)</span>\n<span size='x-small'>WHO</span>";
 
             if bmi_result_scale_marker_margin > 310.0 {
                 bmi_result_scale_marker_margin = 310.0;

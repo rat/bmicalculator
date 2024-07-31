@@ -13,7 +13,7 @@ label.bmi_result {
   min-width: 46px;
   opacity: 0.3;
   border: 1px solid transparent;
-  transition: box-shadow 0.12s, border 0.12s;
+  transition: box-shadow 0.22s, border 0.22s;
 }
 
 
