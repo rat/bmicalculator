@@ -189,7 +189,7 @@ impl BmicalculatorApplication {
         } else if bmi_result >= 40.0 {
             bmi_result_css_class = "overweight3";
             bmi_result_scale_marker_margin = (56.0 / (60.0 - 40.0) * (bmi_result - 40.0)) + 56.0 * 5.0 - 13.0;
-            bmi_result_description_who = "<span color='#cc0080' weight='normal'>Obese (Class III)</span>\n<span size='x-small'>WHO</span>";
+            bmi_result_description_who = "<span color='#dd2599' weight='normal'>Obese (Class III)</span>\n<span size='x-small'>WHO</span>";
 
             if bmi_result_scale_marker_margin > 310.0 {
                 bmi_result_scale_marker_margin = 310.0;
@@ -207,8 +207,25 @@ impl BmicalculatorApplication {
         let _ = &bmi_calculator_window.imp().bmi_scale_marker.get().set_opacity(1.0);
 
 
-        // TODO Set the DGE result text and colors
+        // Set the DGE result text
 
+        let mut bmi_result_description_dge = "";
+
+        if (bmi_result < 20.0 && gender_index_int == 0) || (bmi_result < 19.0 && gender_index_int == 1) {
+            bmi_result_description_dge = "<span color='#7c7cfc' weight='normal'>Underweight</span>\n<span size='x-small'>DGE</span>";
+        } else if (bmi_result >= 20.0 && bmi_result <= 24.9 && gender_index_int == 0) || (bmi_result >= 19.0 && bmi_result <= 23.9 && gender_index_int == 1) {
+            bmi_result_description_dge= "<span color='#00aa00' weight='normal'>Normal range</span>\n<span size='x-small'>DGE</span>";
+        } else if (bmi_result >= 25.0 && bmi_result <= 29.9 && gender_index_int == 0) || (bmi_result >= 24.0 && bmi_result <= 29.9 && gender_index_int == 1) {
+            bmi_result_description_dge = "<span color='#e7b632' weight='normal'>Overweight</span>\n<span size='x-small'>DGE</span>";
+        } else if bmi_result >= 30.0 && bmi_result <= 34.9 {
+            bmi_result_description_dge = "<span color='#ff8b66' weight='normal'>Obese (Class I)</span>\n<span size='x-small'>DGE</span>";
+        } else if bmi_result >= 35.0 && bmi_result <= 39.9 {
+            bmi_result_description_dge = "<span color='#ee6080' weight='normal'>Obese (Class II)</span>\n<span size='x-small'>DGE</span>";
+        } else if bmi_result >= 40.0 {
+            bmi_result_description_dge = "<span color='#dd2599' weight='normal'>Obese (Class III)</span>\n<span size='x-small'>DGE</span>";
+        }
+
+        let _ = &bmi_calculator_window.imp().bmi_result_description_dge.set_markup(bmi_result_description_dge);
 
     }
 

@@ -49,8 +49,8 @@ label.bmi_result.overweight2 {
 
 label.bmi_result.overweight3 {
   opacity: 1;
-  border: 1px solid #cc0080;
-  box-shadow: 0px 0px 220px rgba(204,0,128, 1.0), 0px 0px 45px rgba(204,0,128, 0.8);
+  border: 1px solid #dd2599;
+  box-shadow: 0px 0px 220px rgba(221,37,153, 1.0), 0px 0px 45px rgba(221,37,153, 0.8);
 }
 
 
@@ -98,12 +98,12 @@ box.bmi_scale_numbers box.bmi_scale_overweight2 {
 }
 
 box.bmi_scale box.bmi_scale_overweight3 {
-  background-color: #cc0080;
+  background-color: #dd2599;
   border-radius: 0px 6px 6px 0px;
 }
 
 box.bmi_scale_numbers box.bmi_scale_overweight3 {
-  color: #cc0080;
+  color: #dd2599;
 }
 
 
