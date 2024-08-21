@@ -8,12 +8,12 @@ sheet.background {
 
 popover contents,
 popover arrow {
-  border: 1px solid #505979;
+  border: 1px solid #525a76;
 }
 
 popover.background contents,
 popover.background arrow {
-  background-color: rgba(53,59,80, 0.85);
+  background-color: rgba(59,65,85, 0.85);
 }
 
 
