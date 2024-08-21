@@ -113,7 +113,7 @@ impl BmicalculatorApplication {
         let about_dialog = adw::AboutDialog::new();
 
         about_dialog.set_application_name("BMI Calculator");
-        about_dialog.set_application_icon("app.schubidu.BmiCalculator");
+        about_dialog.set_application_icon("io.github.johannesboehler2.BmiCalculator");
         about_dialog.set_developer_name("Johannes Böhler");
         about_dialog.set_version(VERSION);
         about_dialog.set_developers(&["Johannes Böhler"]);

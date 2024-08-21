@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2024 Johannes Böhler -->
 <component type="desktop">
-  <id>app.schubidu.BmiCalculator.desktop</id>
+  <id>io.github.johannesboehler2.BmiCalculator.desktop</id>
 
   <name>BMI Calculator</name>
   <summary>Calculate your BMI</summary>
@@ -11,7 +11,7 @@
   <project_license>GPL-3.0-or-later</project_license>
 
   <!-- TODO add website -->
-  <launchable type="desktop-id">app.schubidu.bmicalculator.desktop</launchable>
+  <launchable type="desktop-id">io.github.johannesboehler2.BmiCalculator.desktop</launchable>
 
   <content_rating type="oars-1.0" />
 

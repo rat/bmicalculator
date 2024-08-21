@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=BMI Calculator
 Exec=bmicalculator
-Icon=app.schubidu.BmiCalculator
+Icon=io.github.johannesboehler2.BmiCalculator
 Terminal=false
 Type=Application
 Categories=Utility;

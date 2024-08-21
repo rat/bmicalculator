@@ -37,7 +37,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, gtk::CompositeTemplate)]
-    #[template(resource = "/app/schubidu/BmiCalculator/window.ui")]
+    #[template(resource = "/io/github/johannesboehler2/BmiCalculator/window.ui")]
     pub struct BmicalculatorWindow {
         // Template widgets
         #[template_child]

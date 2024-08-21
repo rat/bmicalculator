@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="bmicalculator">
-	<schema id="app.schubidu.BmiCalculator" path="/app/schubidu/BmiCalculator/">
+	<schema id="io.github.johannesboehler2.BmiCalculator" path="/io/github/johannesboehler2/BmiCalculator/">
 	</schema>
 </schemalist>

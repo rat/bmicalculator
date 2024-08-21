@@ -1,5 +1,5 @@
 
-![](data/icons/hicolor/scalable/apps/app.schubidu.BmiCalculator.svg)
+![](data/icons/hicolor/scalable/apps/io.github.johannesboehler2.BmiCalculator.svg)
 
 # BMI Calculator
 
@@ -19,7 +19,7 @@
 ### Flatpak
 BMI Calculator is available as a Flatpak on Flathub:
 
-<a href="https://flathub.org/apps/details/app.schubidu.BmiCalculator"><img alt='Download on Flathub' src='https://flathub.org/api/badge?svg&locale=en'/></a>
+<a href="https://flathub.org/apps/details/io.github.johannesboehler2.BmiCalculator"><img alt='Download on Flathub' src='https://flathub.org/api/badge?svg&locale=en'/></a>
 
 
 TODO: add description

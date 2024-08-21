@@ -1,4 +1,4 @@
-application_id = 'app.schubidu.BmiCalculator'
+application_id = 'io.github.johannesboehler2.BmiCalculator'
 
 scalable_dir = 'hicolor' / 'scalable' / 'apps'
 install_data(

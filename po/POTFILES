@@ -1,4 +1,4 @@
-data/app.schubidu.BmiCalculator.desktop.in
-data/app.schubidu.BmiCalculator.metainfo.xml.in
-data/app.schubidu.BmiCalculator.gschema.xml
+data/io.github.johannesboehler2.BmiCalculator.desktop.in
+data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in
+data/io.github.johannesboehler2.BmiCalculator.gschema.xml
 src/window.ui

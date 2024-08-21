@@ -1,5 +1,5 @@
 {
-    "id" : "app.schubidu.BmiCalculator",
+    "id" : "io.github.johannesboehler2.BmiCalculator",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
