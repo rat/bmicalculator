@@ -110,21 +110,21 @@ impl BmicalculatorApplication {
 
         // TODO use metainfo.xml
 
-        let about_dialog = adw::AboutDialog::new();
+        let about_dialog = adw::AboutDialog::builder()
+            .application_name("BMI Calculator")
+            .application_icon("io.github.johannesboehler2.BmiCalculator")
+            .developer_name("Johannes Böhler")
+            .version(VERSION)
+            .developers(vec!["Johannes Böhler"])
+            .copyright("© 2024 Johannes Böhler")
+            .website("https://github.com/johannesboehler2/bmicalculator")
+            .release_notes("
+	            <p>Add new app icon</p>
+      	    ")
+            .build();
 
-        about_dialog.set_application_name("BMI Calculator");
-        about_dialog.set_application_icon("io.github.johannesboehler2.BmiCalculator");
-        about_dialog.set_developer_name("Johannes Böhler");
-        about_dialog.set_version(VERSION);
-        about_dialog.set_developers(&["Johannes Böhler"]);
-        about_dialog.set_copyright("© 2024 Johannes Böhler");
+        about_dialog.present(Some(&window));
 
-        about_dialog.set_website("https://github.com/johannesboehler2/bmicalculator");
-        about_dialog.set_release_notes("
-	    <p>Add new app icon</p>
-      	");
-
-        about_dialog.present(&window);
     }
 
     fn calculate_bmi(&self) {
