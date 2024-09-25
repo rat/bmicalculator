@@ -3,30 +3,21 @@
 
 # BMI Calculator
 
-🚧 This is work in progress!
-
-
-## Features
-- feature 001
-- feature 002
-- feature 003
-- feature 004
-- feature 005
-- feature 006
-
+Calculate your bmi
 
 ## Install
 ### Flatpak
-BMI Calculator is available as a Flatpak on Flathub:
+BMI Calculator wiil be available as a Flatpak on Flathub:
 
 <a href="https://flathub.org/apps/details/io.github.johannesboehler2.BmiCalculator"><img alt='Download on Flathub' src='https://flathub.org/api/badge?svg&locale=en'/></a>
 
-
-TODO: add description
-
 ## Screenshots
 
-![Normal weight](data/screenshots/screenshot-normal-weight.png)
+![Normal weight](data/screenshots/screenshot-light-normal-weight.png)
+![Normal weight dark](data/screenshots/screenshot-dark-normal-weight.png)
+![Obese dark](data/screenshots/screenshot-dark-obese.png)
+![Underweight dark](data/screenshots/screenshot-dark-underweight.png)
+
 
 
 
