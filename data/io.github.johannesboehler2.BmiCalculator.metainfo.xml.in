@@ -22,7 +22,7 @@
   </recommends>
 
   <description>
-    <p>Calculate the BMI with:</p><!-- TODO -->
+    <p>Calculate the BMI with:</p>
     <ul>
       <li>Weight</li>
       <li>Height</li>
@@ -45,24 +45,30 @@
 
   <screenshots>
     <screenshot type="default">
+      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-light-normal-weight.png</image>
+      <caption>Light style</caption>
+    </screenshot>
+    <screenshot>
       <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-normal-weight.png</image>
       <caption>Dark style</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-normal-weight.png</image>
-      <caption>Light style</caption>
+      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-obese.png</image>
+      <caption>Obese</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-underweight.png</image>
+      <caption>Underweight</caption>
     </screenshot>
   </screenshots>
 
   <releases>
     <release version="0.1.1" date="2024-02-28">
-      <url type="details">https://example.org/changelog.html#version_1.0.1</url><!-- TODO -->
       <description>
         <p>Add new app icon</p>
       </description>
     </release>
     <release version="0.1.0" date="2024-02-28">
-      <url type="details">https://example.org/changelog.html#version_1.0.1</url><!-- TODO -->
       <description>
         <p>Initial release</p>
       </description>
