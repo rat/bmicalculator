@@ -10,7 +10,13 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <!-- TODO add website -->
+  <developer id="io.github.johannesboehler2">
+    <name>Johannes Böhler</name>
+  </developer>
+
+  <url type="homepage">https://github.com/johannesboehler2/bmicalculator</url>
+  <url type="bugtracker">https://github.com/johannesboehler2/bmicalculator/issues</url>
+
   <launchable type="desktop-id">io.github.johannesboehler2.BmiCalculator.desktop</launchable>
 
   <content_rating type="oars-1.0" />
@@ -22,12 +28,7 @@
   </recommends>
 
   <description>
-    <p>Calculate the BMI with:</p>
-    <ul>
-      <li>Weight</li>
-      <li>Height</li>
-      <li>Gender</li>
-    </ul>
+    <p>Calculate your BMI from weight, height and gender.</p>
   </description>
 
   <branding>
@@ -63,6 +64,11 @@
   </screenshots>
 
   <releases>
+    <release version="1.0" date="2024-09-29">
+      <description>
+        <p>First public release</p>
+      </description>
+    </release>
     <release version="0.1.1" date="2024-02-28">
       <description>
         <p>Add new app icon</p>
