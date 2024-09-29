@@ -3,7 +3,7 @@
 
 # BMI Calculator
 
-Calculate your bmi
+BMI Calculator is a body mass index calculator built with GTK4 and LibAdwaita.
 
 ## Install
 ### Flatpak
