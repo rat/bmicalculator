@@ -45,7 +45,8 @@
                     "type" : "git",
                     "branch": "main",
                     "url" : "https://github.com/johannesboehler2/bmicalculator.git"
-                }
+                },
+                "cargo-sources.json"
             ]
         }
     ]
