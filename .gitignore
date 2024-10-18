@@ -3,6 +3,8 @@
 debug/
 target/
 builddir/
+_builddir/
+vendor/
 repo/
 src/config.rs
 
