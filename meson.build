@@ -22,5 +22,5 @@ gnome.post_install(
 meson.add_dist_script(
   'build-aux/dist-vendor.sh',
   meson.build_root() / 'meson-dist' / meson.project_name() + '-' + '1.0',
-  meson.source_root()
+  meson.project_source_root()
 )
