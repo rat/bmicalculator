@@ -5,11 +5,6 @@
 
 BMI Calculator is a body mass index calculator built with GTK4 and LibAdwaita.
 
-## Install
-### Flatpak
-BMI Calculator wiil be available as a Flatpak on Flathub:
-
-<a href="https://flathub.org/apps/details/io.github.johannesboehler2.BmiCalculator"><img alt='Download on Flathub' src='https://flathub.org/api/badge?svg&locale=en'/></a>
 
 ## Screenshots
 
