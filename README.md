@@ -14,9 +14,6 @@ https://github.com/johannesboehler2/bmicalculator/releases/download/v1.0/io.gith
 https://github.com/johannesboehler2/bmicalculator/releases/download/v1.0/io.github.johannesboehler2.BmiCalculator.flatpak</a>
 
 
-https://github.com/johannesboehler2/bmicalculator/releases/download/v1.0/io.github.johannesboehler2.BmiCalculator.flatpak
-
-
 ## Screenshots
 
 ![Normal weight](data/screenshots/screenshot-light-normal-weight.png)
