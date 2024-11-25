@@ -11,9 +11,3 @@ gtk = { version = "0.9", package = "gtk4", features = ["gnome_47"] }
 package = "libadwaita"
 version = "0.7"
 features = ["v1_6"]
-
-[source.crates-io]
-replace-with = "vendored-sources"
-
-[source.vendored-sources]
-directory = "vendor"
