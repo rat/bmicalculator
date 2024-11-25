@@ -42,10 +42,10 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type": "dir",
-                    "path": "./"
-                },
-                "cargo-sources.json"
+                    "type" : "git",
+                    "branch": "main",
+                    "url" : "https://github.com/johannesboehler2/bmicalculator.git"
+            	}
             ]
         }
     ]
