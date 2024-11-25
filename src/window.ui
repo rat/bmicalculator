@@ -99,7 +99,7 @@
                 <child>
                   <object class="GtkBox">
                     <property name="halign">center</property>
-                    <property name="margin-top">32</property>
+                    <property name="margin-top">36</property>
                     <property name="margin-bottom">6</property>
                     <child>
                       <object class="GtkLabel" id="bmi_result">

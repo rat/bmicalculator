@@ -2,6 +2,7 @@ window.background {
   background-color: rgba(43,48,65, 1);
 }
 
+.bottom-bar,
 sheet.background {
   background-color: rgba(43,48,65, 0.8);
 }
