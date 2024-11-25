@@ -21,8 +21,28 @@
             </child>
           </object>
         </child>
-        <property name="content">
 
+        <child type="bottom">
+          <object class="GtkActionBar" id="bottom_bar">
+            <style>
+              <class name="toolbar"/>
+            </style>
+            <child type="center">
+              <object class="GtkButton" id="calculate_button">
+                <property name="label" translatable="yes">CALCULATE</property>
+                <property name="receives-default">True</property>
+                <property name="halign">center</property>
+                <property name="action-name">app.calculate_bmi</property>
+                <style>
+                  <class name="suggested-action"/>
+                  <class name="pill"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <property name="content">
           <object class="GtkBox" id="content">
             <property name="visible">True</property>
             <property name="margin-start">12</property>
@@ -388,28 +408,6 @@
                       <class name="bmi_result_description"/>
                       <class name="title-4"/>
                     </style>
-                  </object>
-                </child>
-
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <property name="spacing">6</property>
-                    <property name="vexpand">True</property>
-                    <property name="valign">end</property>
-                    <child>
-                      <object class="GtkButton" id="calculate_button">
-                        <property name="label" translatable="yes">CALCULATE</property>
-                        <property name="receives-default">True</property>
-                        <property name="margin-top">12</property>
-                        <property name="halign">center</property>
-                        <property name="action-name">app.calculate_bmi</property>
-                        <style>
-                          <class name="suggested-action"/>
-                          <class name="pill"/>
-                        </style>
-                      </object>
-                    </child>
                   </object>
                 </child>
 
