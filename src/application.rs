@@ -119,7 +119,7 @@ impl BmicalculatorApplication {
             .copyright("© 2024 Johannes Böhler")
             .website("https://github.com/johannesboehler2/bmicalculator")
             .release_notes("
-	            <p>First public release</p>
+	            <p>Scrollable content</p>
       	    ")
             .build();
 
