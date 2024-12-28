@@ -34,6 +34,7 @@ Two columns layout for landscape mode
 ![Normal weight dark](data/screenshots/screenshot-dark-normal-weight.png)
 ![Obese dark](data/screenshots/screenshot-dark-obese.png)
 ![Underweight dark](data/screenshots/screenshot-dark-underweight.png)
+![Landscape](data/screenshots/screenshot-light-landscape.png)
 
 
 
