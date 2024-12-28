@@ -17,6 +17,8 @@ https://github.com/johannesboehler2/bmicalculator/releases/download/v1.0/io.gith
 
 __Version 1.1__
 
+Scrollable content
+
 <a href="
 https://github.com/johannesboehler2/bmicalculator/releases/download/v1.1/io.github.johannesboehler2.BmiCalculator.flatpak">
 https://github.com/johannesboehler2/bmicalculator/releases/download/v1.1/io.github.johannesboehler2.BmiCalculator.flatpak</a>
