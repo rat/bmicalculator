@@ -23,6 +23,10 @@ Scrollable content
 https://github.com/johannesboehler2/bmicalculator/releases/download/v1.1/io.github.johannesboehler2.BmiCalculator.flatpak">
 https://github.com/johannesboehler2/bmicalculator/releases/download/v1.1/io.github.johannesboehler2.BmiCalculator.flatpak</a>
 
+__Version 1.2__
+
+Two columns layout for landscape mode
+
 
 ## Screenshots
 
