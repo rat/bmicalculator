@@ -7,8 +7,21 @@
     <property name="default-width">360</property>
     <property name="default-height">840</property>
     <property name="title">BMI Calculator</property>
+    <style>
+      <class name="main_window"/>
+    </style>
+
+    <child>
+      <object class="AdwBreakpoint">
+        <condition>min-width: 720px</condition>
+        <setter object="content" property="orientation">horizontal</setter>
+        <setter object="bmi_result_container" property="margin-top">52</setter>
+      </object>
+    </child>
+
     <property name="content">
       <object class="AdwToolbarView">
+
         <child type="top">
           <object class="AdwHeaderBar" id="header_bar">
             <child type="end">
@@ -58,9 +71,10 @@
                   <class name="content"/>
                 </style>
                 <child>
-                  <object class="GtkListBox">
+                  <object class="GtkListBox" id="left_column">
                     <property name="selection-mode">0</property>
-
+                    <property name="valign">start</property>
+                    <property name="width-request">336</property>
                     <style>
                       <class name="boxed-list"/>
                     </style>
@@ -97,60 +111,24 @@
                 </child>
 
                 <child>
-                  <object class="GtkBox">
-                    <property name="halign">center</property>
-                    <property name="margin-top">36</property>
-                    <property name="margin-bottom">6</property>
-                    <child>
-                      <object class="GtkLabel" id="bmi_result">
-                        <property name="label" translatable="yes">0</property>
-                        <style>
-                          <class name="bmi_result"/>
-                        </style>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-
-                <child>
-                  <object class="GtkBox">
-                    <property name="halign">center</property>
+                  <object class="GtkBox" id="right_column">
                     <property name="orientation">vertical</property>
-                    <property name="spacing">0</property>
+                    <property name="hexpand">true</property>
                     <child>
-                      <object class="GtkBox">
+                      <object class="GtkBox" id="bmi_result_container">
                         <property name="halign">center</property>
-                        <property name="orientation">horizontal</property>
-                        <property name="width-request">336</property>
-                        <property name="height-request">12</property>
-                        <property name="spacing">0</property>
-                        <style>
-                          <class name="bmi_scale_marker_container"/>
-                        </style>
+                        <property name="margin-top">36</property>
+                        <property name="margin-bottom">6</property>
                         <child>
-                          <object class="GtkBox" id="bmi_scale_marker">
-                            <property name="halign">center</property>
-                            <property name="orientation">horizontal</property>
-                            <property name="width-request">12</property>
-                            <property name="height-request">12</property>
-                            <property name="margin-start">0</property>
-                            <property name="opacity">0</property>
+                          <object class="GtkLabel" id="bmi_result">
+                            <property name="label" translatable="yes">0</property>
                             <style>
-                              <class name="bmi_scale_marker"/>
+                              <class name="bmi_result"/>
                             </style>
-                            <child>
-                              <object class="GtkImage">
-                                <property name="icon-name">pan-down-symbolic</property>
-                                <property name="icon-size">normal</property>
-                                <property name="pixel-size">26</property>
-                              </object>
-                            </child>
                           </object>
                         </child>
-
                       </object>
                     </child>
-
                     <child>
                       <object class="GtkBox">
                         <property name="halign">center</property>
@@ -162,254 +140,294 @@
                             <property name="orientation">horizontal</property>
                             <property name="width-request">336</property>
                             <property name="height-request">12</property>
+                            <property name="spacing">0</property>
+                            <style>
+                              <class name="bmi_scale_marker_container"/>
+                            </style>
+                            <child>
+                              <object class="GtkBox" id="bmi_scale_marker">
+                                <property name="halign">center</property>
+                                <property name="orientation">horizontal</property>
+                                <property name="width-request">12</property>
+                                <property name="height-request">12</property>
+                                <property name="margin-start">0</property>
+                                <property name="opacity">0</property>
+                                <style>
+                                  <class name="bmi_scale_marker"/>
+                                </style>
+                                <child>
+                                  <object class="GtkImage">
+                                    <property name="icon-name">pan-down-symbolic</property>
+                                    <property name="icon-size">normal</property>
+                                    <property name="pixel-size">26</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="halign">center</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">0</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="halign">center</property>
+                                <property name="orientation">horizontal</property>
+                                <property name="width-request">336</property>
+                                <property name="height-request">12</property>
+                                <property name="margin-top">0</property>
+                                <style>
+                                  <class name="bmi_scale"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_underweight"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_normal_weight"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight1"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight2"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight3"/>
+                                    </style>
+                                  </object>
+                                </child>
+
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+
+                        <child>
+                          <object class="GtkBox">
+                            <property name="halign">center</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">0</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="halign">center</property>
+                                <property name="orientation">horizontal</property>
+                                <property name="width-request">336</property>
+                                <property name="height-request">12</property>
+                                <property name="margin-bottom">18</property>
+                                <property name="margin-top">3</property>
+                                <style>
+                                  <class name="bmi_scale_numbers"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">46</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_underweight"/>
+                                    </style>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes"></property>
+                                        <property name="margin-top">0</property>
+                                        <property name="justify">left</property>
+                                        <style>
+
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_normal_weight"/>
+                                    </style>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">18.5</property>
+                                        <property name="margin-top">0</property>
+                                        <property name="justify">left</property>
+                                        <style>
+
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight"/>
+                                    </style>
+                                    <child>
+			                                <object class="GtkLabel">
+			                                  <property name="label" translatable="yes">25.0</property>
+			                                  <property name="margin-top">0</property>
+			                                  <property name="justify">left</property>
+			                                  <style>
+
+			                                  </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight1"/>
+                                    </style>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">30.0</property>
+                                        <property name="margin-top">0</property>
+                                        <property name="justify">left</property>
+                                        <style>
+
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight2"/>
+                                    </style>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">35.0</property>
+                                        <property name="margin-top">0</property>
+                                        <property name="justify">left</property>
+                                        <style>
+
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="width-request">56</property>
+                                    <property name="height-request">12</property>
+                                    <style>
+                                      <class name="bmi_scale_overweight3"/>
+                                    </style>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">40.0</property>
+                                        <property name="margin-top">0</property>
+                                        <property name="justify">left</property>
+                                        <style>
+
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+
+                        <child>
+                          <object class="GtkLabel" id="bmi_result_description_who">
+                            <property name="label" translatable="yes"></property>
                             <property name="margin-top">0</property>
+                            <property name="margin-bottom">16</property>
+                            <property name="justify">center</property>
                             <style>
-                              <class name="bmi_scale"/>
+                              <class name="bmi_result_description"/>
+                              <class name="title-4"/>
                             </style>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_underweight"/>
-                                </style>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_normal_weight"/>
-                                </style>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight"/>
-                                </style>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight1"/>
-                                </style>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight2"/>
-                                </style>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight3"/>
-                                </style>
-                              </object>
-                            </child>
-
                           </object>
                         </child>
-                      </object>
-                    </child>
 
-                    <child>
-                      <object class="GtkBox">
-                        <property name="halign">center</property>
-                        <property name="orientation">vertical</property>
-                        <property name="spacing">0</property>
                         <child>
-                          <object class="GtkBox">
-                            <property name="halign">center</property>
-                            <property name="orientation">horizontal</property>
-                            <property name="width-request">336</property>
-                            <property name="height-request">12</property>
-                            <property name="margin-bottom">18</property>
-                            <property name="margin-top">3</property>
+                          <object class="GtkLabel" id="bmi_result_description_dge">
+                            <property name="label" translatable="yes"></property>
+                            <property name="margin-top">0</property>
+                            <property name="margin-bottom">16</property>
+                            <property name="justify">center</property>
                             <style>
-                              <class name="bmi_scale_numbers"/>
+                              <class name="bmi_result_description"/>
+                              <class name="title-4"/>
                             </style>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">46</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_underweight"/>
-                                </style>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="yes"></property>
-                                    <property name="margin-top">0</property>
-                                    <property name="justify">left</property>
-                                    <style>
-
-                                    </style>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_normal_weight"/>
-                                </style>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="yes">18.5</property>
-                                    <property name="margin-top">0</property>
-                                    <property name="justify">left</property>
-                                    <style>
-
-                                    </style>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight"/>
-                                </style>
-                                <child>
-			                            <object class="GtkLabel">
-			                              <property name="label" translatable="yes">25.0</property>
-			                              <property name="margin-top">0</property>
-			                              <property name="justify">left</property>
-			                              <style>
-
-			                              </style>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight1"/>
-                                </style>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="yes">30.0</property>
-                                    <property name="margin-top">0</property>
-                                    <property name="justify">left</property>
-                                    <style>
-
-                                    </style>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight2"/>
-                                </style>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="yes">35.0</property>
-                                    <property name="margin-top">0</property>
-                                    <property name="justify">left</property>
-                                    <style>
-
-                                    </style>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="halign">center</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="width-request">56</property>
-                                <property name="height-request">12</property>
-                                <style>
-                                  <class name="bmi_scale_overweight3"/>
-                                </style>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="yes">40.0</property>
-                                    <property name="margin-top">0</property>
-                                    <property name="justify">left</property>
-                                    <style>
-
-                                    </style>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-
                           </object>
                         </child>
-                      </object>
-                    </child>
 
-                    <child>
-                      <object class="GtkLabel" id="bmi_result_description_who">
-                        <property name="label" translatable="yes"></property>
-                        <property name="margin-top">0</property>
-                        <property name="margin-bottom">16</property>
-                        <property name="justify">center</property>
-                        <style>
-                          <class name="bmi_result_description"/>
-                          <class name="title-4"/>
-                        </style>
-                      </object>
-                    </child>
-
-                    <child>
-                      <object class="GtkLabel" id="bmi_result_description_dge">
-                        <property name="label" translatable="yes"></property>
-                        <property name="margin-top">0</property>
-                        <property name="margin-bottom">16</property>
-                        <property name="justify">center</property>
-                        <style>
-                          <class name="bmi_result_description"/>
-                          <class name="title-4"/>
-                        </style>
                       </object>
                     </child>
 
@@ -420,7 +438,6 @@
             </child>
           </object>
         </property>
-
 
       </object>
     </property>
