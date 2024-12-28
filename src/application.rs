@@ -120,7 +120,7 @@ impl BmicalculatorApplication {
             .license_type(gtk::License::Gpl30)
             .website("https://github.com/johannesboehler2/bmicalculator")
             .release_notes("
-	            <p>Scrollable content</p>
+	            <p>Two columns layout for landscape mode</p>
       	    ")
             .build();
 
