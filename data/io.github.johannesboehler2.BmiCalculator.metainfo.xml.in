@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2024 Johannes Böhler -->
 <component type="desktop">
-  <id>io.github.johannesboehler2.BmiCalculator.desktop</id>
+  <id>io.github.johannesboehler2.BmiCalculator</id>
 
   <name>BMI Calculator</name>
   <summary>Calculate your BMI</summary>
