@@ -28,6 +28,13 @@ __Version 1.2__
 Two columns layout for landscape mode
 
 
+
+<a href='https://flathub.org/apps/io.github.johannesboehler2.BmiCalculator'>
+  <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
+</a>
+
+
+
 ## Screenshots
 
 ![Normal weight](data/screenshots/screenshot-light-normal-weight.png)
