@@ -64,7 +64,7 @@ msgstr "Prima rilascio pubblico"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:84
 msgid "Add new app icon"
-msgstr "Aggiunta nuova icona dell'app
+msgstr "Aggiunta nuova icona dell'app"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:89
 msgid "Initial release"
