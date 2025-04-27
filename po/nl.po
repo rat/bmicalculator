@@ -75,10 +75,6 @@ msgstr "Eerste versie"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/window.ui:9
-msgid "BMI Calculator"
-msgstr "BMI-rekenmachine"
-
 #: src/window.ui:45
 msgid "CALCULATE"
 msgstr "BEREKENEN"
