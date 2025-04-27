@@ -116,7 +116,7 @@ impl BmicalculatorApplication {
             .developer_name("Johannes Böhler")
             .version(VERSION)
             .developers(vec!["Johannes Böhler"])
-            .copyright("© 2024 Johannes Böhler")
+            .copyright("© 2024, 2025 Johannes Böhler")
             .license_type(gtk::License::Gpl30)
             .website("https://github.com/johannesboehler2/bmicalculator")
             .release_notes("
