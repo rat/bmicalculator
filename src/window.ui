@@ -6,7 +6,7 @@
     <property name="width-request">360</property>
     <property name="default-width">360</property>
     <property name="default-height">640</property>
-    <property name="title">BMI Calculator</property>
+    <property name="title" translatable="yes">BMI Calculator</property>
     <style>
       <class name="main_window"/>
     </style>

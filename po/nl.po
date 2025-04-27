@@ -32,7 +32,7 @@ msgid "Johannes Böhler"
 msgstr "Johannes Böhler"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:31
-msgid "Calculate your BMI from weight, height and gender."
+msgid "Calculate your body mass index from weight, height and gender."
 msgstr "Bereken uw BMI op basis van uw gewicht, lengte en geslacht."
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:50
@@ -74,6 +74,10 @@ msgstr "Eerste versie"
 #: src/window.ui:31
 msgid "Menu"
 msgstr "Menu"
+
+#: src/window.ui:9
+msgid "BMI Calculator"
+msgstr "BMI-rekenmachine"
 
 #: src/window.ui:45
 msgid "CALCULATE"
