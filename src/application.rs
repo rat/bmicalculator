@@ -120,7 +120,7 @@ impl BmicalculatorApplication {
             .license_type(gtk::License::Gpl30)
             .website("https://github.com/johannesboehler2/bmicalculator")
             .release_notes("
-	            <p>Dutch translations (thanks to Heimen Stoffels)</p>
+	            <p>Italian translations (thanks to Albano Battistella)</p>
       	    ")
             .build();
 

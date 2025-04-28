@@ -68,7 +68,12 @@
   </screenshots>
 
   <releases>
-    <release version="1.2.1" date="2025-05-21">
+    <release version="1.2.2" date="2025-04-28">
+      <description>
+        <p>Italian translations (thanks to Albano Battistella)</p>
+      </description>
+    </release>
+    <release version="1.2.1" date="2025-04-21">
       <description>
         <p>Dutch translations (thanks to Heimen Stoffels)</p>
       </description>
