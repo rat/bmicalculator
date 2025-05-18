@@ -65,6 +65,16 @@
       <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-underweight.png</image>
       <caption>Underweight</caption>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-phone-portrait.png</image>
+      <caption>Smartphone portrait</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-phone-landscape.png</image>
+      <caption>Smartphone landscape</caption>
+    </screenshot>
+
+
   </screenshots>
 
   <releases>
