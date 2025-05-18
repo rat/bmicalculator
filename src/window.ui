@@ -41,15 +41,20 @@
               <class name="toolbar"/>
             </style>
             <child type="center">
-              <object class="GtkButton" id="calculate_button">
-                <property name="label" translatable="yes">CALCULATE</property>
-                <property name="receives-default">True</property>
-                <property name="halign">center</property>
-                <property name="action-name">app.calculate_bmi</property>
-                <style>
-                  <class name="suggested-action"/>
-                  <class name="pill"/>
-                </style>
+              <object class="GtkBox">
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkButton" id="calculate_button">
+                    <property name="label" translatable="yes">Calculate</property>
+                    <property name="receives-default">True</property>
+                    <property name="halign">center</property>
+                    <property name="action-name">app.calculate_bmi</property>
+                    <style>
+                      <class name="suggested-action"/>
+                      <class name="pill"/>
+                    </style>
+                  </object>
+                </child>
               </object>
             </child>
           </object>

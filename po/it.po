@@ -75,8 +75,8 @@ msgid "Menu"
 msgstr "Menu"
 
 #: src/window.ui:45
-msgid "CALCULATE"
-msgstr "CALCOLA"
+msgid "Calculate"
+msgstr "Calcola"
 
 #: src/window.ui:84
 msgid "Weight (in kg)"
