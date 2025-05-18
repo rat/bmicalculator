@@ -1,23 +1,21 @@
-window.background {
-  background-color: rgba(43,48,65, 1);
-}
-
-.bottom-bar,
+window.background,
+.screen-view > .background,
 sheet.background {
-  background-color: rgba(43,48,65, 0.8);
+  background-color: #323232;
 }
 
 popover contents,
 popover arrow {
-  border: 1px solid #525a76;
+  border: 1px solid #646464;
 }
 
-popover.background contents,
-popover.background arrow {
-  background-color: rgba(59,65,85, 0.85);
+popover.background arrow,
+popover.background contents {
+  background-color: #3c3c3c;
 }
 
 
 label.bmi_result {
   background-color: rgba(255,255,255, 0.07);
 }
+
