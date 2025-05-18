@@ -456,10 +456,10 @@
     </columns>
     <data>
       <row>
-        <col id="0" translatable="yes">Male</col>
+        <col id="0" translatable="yes">_Male</col>
       </row>
       <row>
-        <col id="0" translatable="yes">Female</col>
+        <col id="0" translatable="yes">_Female</col>
       </row>
     </data>
   </object>
