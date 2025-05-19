@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=BMI Calculator
+Comment=Calculate your body mass index
 Exec=bmicalculator
 Icon=io.github.johannesboehler2.BmiCalculator
+Keywords=GTK;body;mass;index;calculator;BMI;health;
 Terminal=false
 Type=Application
 Categories=Utility;
