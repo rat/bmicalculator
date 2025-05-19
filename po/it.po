@@ -128,4 +128,4 @@ msgstr "_Scorciatoie da tastiera"
 
 #: src/window.ui:469
 msgid "_About BMI Calculator"
-msgstr "Informazioni su Calcolatore BMI "
+msgstr "Informazioni su Calcolatore BMI"
