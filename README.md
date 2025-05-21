@@ -33,6 +33,10 @@ Two columns layout for landscape mode
   <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
 </a>
 
+<a href="appstream://io.github.johannesboehler2.BmiCalculator" rel="nofollow">
+    <img width='240' alt='Install on Linux' src='https://raw.githubusercontent.com/johannesboehler2/bmicalculator/refs/heads/main/data/icons/install_on_linux.svg'/>
+</a>
+
 
 
 ## Screenshots
