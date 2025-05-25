@@ -1,6 +1,6 @@
 /* application.rs
  *
- * Copyright 2024 Johannes Böhler
+ * Copyright 2024, 2025 Johannes Böhler
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,6 +25,11 @@ use gtk::{gio, glib};
 use crate::config::VERSION;
 use crate::BmicalculatorWindow;
 use adw::prelude::AdwDialogExt;
+
+use gio::Settings;
+use adw::StyleManager;
+use adw::ColorScheme;
+
 
 mod imp {
     use super::*;
@@ -62,6 +67,8 @@ mod imp {
                 let window = BmicalculatorWindow::new(&*application);
                 window.upcast()
             };
+
+             application.setup_settings();
 
             // Disable the calculate button on startup
             window.action_set_enabled("app.calculate_bmi", false);
@@ -105,6 +112,25 @@ impl BmicalculatorApplication {
         self.add_action_entries([quit_action, about_action, calculate_bmi_action]);
     }
 
+    fn setup_settings(&self) {
+            // Initialize settings TODO move to own function/class
+            let settings = Settings::new("io.github.johannesboehler2.BmiCalculator");
+
+            // let _ = settings.set_string("color-scheme", "follow"); // TODO remove after "preferences" added
+
+            let color_scheme:String = settings.get("color-scheme");
+
+            let style_manager:StyleManager = StyleManager::default();
+
+            if color_scheme == "follow" {
+                style_manager.set_color_scheme(ColorScheme::Default);
+            } else if color_scheme == "light" {
+                style_manager.set_color_scheme(ColorScheme::ForceLight);
+            } else if color_scheme == "dark" {
+                style_manager.set_color_scheme(ColorScheme::ForceDark);
+            }
+    }
+
     fn show_about(&self) {
         let window = self.active_window().unwrap();
 
@@ -114,6 +140,7 @@ impl BmicalculatorApplication {
             .application_name("BMI Calculator")
             .application_icon("io.github.johannesboehler2.BmiCalculator")
             .developer_name("Johannes Böhler")
+            .translator_credits("Heimen Stoffels\nAlbano Battistella")
             .version(VERSION)
             .developers(vec!["Johannes Böhler"])
             .copyright("© 2024, 2025 Johannes Böhler")

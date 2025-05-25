@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="bmicalculator">
 	<schema id="io.github.johannesboehler2.BmiCalculator" path="/io/github/johannesboehler2/BmiCalculator/">
+	  <key name="color-scheme" type="s">
+      <choices>
+        <choice value="follow" />
+        <choice value="light" />
+        <choice value="dark" />
+      </choices>
+      <default>'follow'</default>
+      <summary>Color scheme</summary>
+    </key>
 	</schema>
 </schemalist>
