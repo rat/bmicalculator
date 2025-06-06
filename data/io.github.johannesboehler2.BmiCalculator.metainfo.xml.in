@@ -73,11 +73,14 @@
       <image>https://raw.githubusercontent.com/johannesboehler2/bmicalculator/main/data/screenshots/screenshot-dark-phone-landscape.png?rev=1</image>
       <caption>Smartphone landscape</caption>
     </screenshot>
-
-
   </screenshots>
 
   <releases>
+    <release version="1.3" date="2025-06-6">
+      <description>
+        <p>Add preferences for color scheme and option to remember entries</p>
+      </description>
+    </release>
     <release version="1.2.3" date="2025-05-18">
       <description>
         <p>UI updates</p>

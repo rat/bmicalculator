@@ -160,7 +160,7 @@ impl BmicalculatorApplication {
             .license_type(gtk::License::Gpl30)
             .website("https://github.com/johannesboehler2/bmicalculator")
             .release_notes("
-	            <p>UI updates</p>
+	            <p>Add preferences for color scheme and option to remember entries</p>
       	    ")
             .build();
 
