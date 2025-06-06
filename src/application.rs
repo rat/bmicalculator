@@ -51,6 +51,7 @@ mod imp {
             let obj = self.obj();
             obj.setup_gactions();
             obj.set_accels_for_action("app.quit", &["<primary>q"]);
+            obj.set_accels_for_action("app.preferences", &["<Ctrl>comma"]);
         }
     }
 
@@ -92,6 +93,13 @@ impl BmicalculatorApplication {
             .property("application-id", application_id)
             .property("flags", flags)
             .build()
+    }
+
+    /// Returns application instance.
+    pub fn get() -> Self {
+        gio::Application::default()
+            .and_downcast()
+            .expect("Default `GApplication` is not set yet")
     }
 
     fn setup_gactions(&self) {

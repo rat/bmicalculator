@@ -26,11 +26,15 @@ use gio::Settings;
 
 
 
+
 mod imp {
     use adw::prelude::ComboRowExt;
     use adw::StyleManager;
     use adw::ColorScheme;
-    use crate::BmicalculatorWindow;
+    use crate::{
+        BmicalculatorApplication,
+        BmicalculatorWindow,
+    };
 
     use super::*;
 
@@ -107,8 +111,12 @@ mod imp {
 
             self.remember_entries_row.connect_active_notify(move |obj| {
                 if true == obj.is_active() {
-                    // window.entry_height.delegate().unwrap().notify("text");
-                    // window.entry_weight.delegate().unwrap().notify("text");
+                    let application = BmicalculatorApplication::get();
+                    let window = application.active_window().unwrap();
+                    let bmi_calculator_window = window.downcast::<BmicalculatorWindow>().unwrap();
+
+                    bmi_calculator_window.imp().entry_height.delegate().unwrap().notify("text");
+                    bmi_calculator_window.imp().entry_weight.delegate().unwrap().notify("text");
                 }
             });
 
