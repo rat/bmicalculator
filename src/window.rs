@@ -24,6 +24,7 @@ use gtk::prelude::*;
 use gtk::{gio, glib};
 use crate::IsA;
 use glib::ParamSpec;
+use gio::Settings;
 
 enum Value {
     Int(isize),
@@ -76,7 +77,23 @@ mod imp {
         }
     }
 
-    impl ObjectImpl for BmicalculatorWindow {}
+    impl ObjectImpl for BmicalculatorWindow {
+        fn constructed(&self) {
+            self.parent_constructed();
+
+            let settings = Settings::new("io.github.johannesboehler2.BmiCalculator");
+
+            if true == settings.get("remember-entries") {
+                let height = settings.get::<String>("height");
+                let _ = &self.entry_height.set_text(&height);
+                let weight = settings.get::<String>("weight");
+                let _ = &self.entry_weight.set_text(&weight);
+
+                let _ = &self.entry_height.delegate().unwrap().notify("text");
+                let _ = &self.entry_weight.delegate().unwrap().notify("text");
+            }
+        }
+    }
     impl WidgetImpl for BmicalculatorWindow {}
     impl WindowImpl for BmicalculatorWindow {}
     impl ApplicationWindowImpl for BmicalculatorWindow {}
@@ -148,6 +165,20 @@ impl BmicalculatorWindow {
             let _ = &self.action_set_enabled("app.calculate_bmi", false);
         } else {
             let _ = &self.action_set_enabled("app.calculate_bmi", true);
+        }
+
+        let settings = Settings::new("io.github.johannesboehler2.BmiCalculator");
+
+        if true == settings.get("remember-entries") {
+            if !entry_height.has_css_class("error") && entry_height.text() != "" {
+                let _ = settings.set_string("height", &entry_height.text());
+            }
+            if !entry_weight.has_css_class("error") && entry_weight.text() != "" {
+                let _ = settings.set_string("weight", &entry_weight.text());
+            }
+        } else {
+            let _ = settings.set_string("height", "");
+            let _ = settings.set_string("weight", "");
         }
     }
 

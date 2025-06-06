@@ -21,9 +21,11 @@
 mod application;
 mod config;
 mod window;
+mod preferences;
 
 use self::application::BmicalculatorApplication;
 use self::window::BmicalculatorWindow;
+use self::preferences::BmicalculatorPreferences;
 
 use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};

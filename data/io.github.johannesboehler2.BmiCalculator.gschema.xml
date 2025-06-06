@@ -10,5 +10,17 @@
       <default>'follow'</default>
       <summary>Color scheme</summary>
     </key>
-	</schema>
+  	  <key name="remember-entries" type="b">
+      <default>true</default>
+      <summary>Remember entries</summary>
+    </key>
+  	  <key name="weight" type="s">
+      <default>''</default>
+      <summary>Weight</summary>
+    </key>
+  	  <key name="height" type="s">
+      <default>''</default>
+      <summary>Height</summary>
+    </key>
+  </schema>
 </schemalist>

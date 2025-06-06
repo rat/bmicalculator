@@ -24,6 +24,7 @@ use gtk::{gio, glib};
 
 use crate::config::VERSION;
 use crate::BmicalculatorWindow;
+use crate::BmicalculatorPreferences;
 use adw::prelude::AdwDialogExt;
 
 use gio::Settings;
@@ -70,9 +71,6 @@ mod imp {
 
              application.setup_settings();
 
-            // Disable the calculate button on startup
-            window.action_set_enabled("app.calculate_bmi", false);
-
             // Ask the window manager/compositor to present the window
             window.present();
         }
@@ -105,30 +103,37 @@ impl BmicalculatorApplication {
             .activate(move |app: &Self, _, _| app.show_about())
             .build();
 
+        let preferences_action = gio::ActionEntry::builder("preferences")
+            .activate(move |app: &Self, _, _| app.show_preferences())
+            .build();
+
         let calculate_bmi_action = gio::ActionEntry::builder("calculate_bmi")
             .activate(move |app: &Self, _, _| app.calculate_bmi())
             .build();
 
-        self.add_action_entries([quit_action, about_action, calculate_bmi_action]);
+        self.add_action_entries([quit_action, about_action, preferences_action, calculate_bmi_action]);
     }
 
     fn setup_settings(&self) {
-            // Initialize settings TODO move to own function/class
-            let settings = Settings::new("io.github.johannesboehler2.BmiCalculator");
+        let settings = Settings::new("io.github.johannesboehler2.BmiCalculator");
 
-            // let _ = settings.set_string("color-scheme", "follow"); // TODO remove after "preferences" added
+        let color_scheme:String = settings.get("color-scheme");
 
-            let color_scheme:String = settings.get("color-scheme");
+        let style_manager:StyleManager = StyleManager::default();
 
-            let style_manager:StyleManager = StyleManager::default();
+        if color_scheme == "follow" {
+            style_manager.set_color_scheme(ColorScheme::Default);
+        } else if color_scheme == "light" {
+            style_manager.set_color_scheme(ColorScheme::ForceLight);
+        } else if color_scheme == "dark" {
+            style_manager.set_color_scheme(ColorScheme::ForceDark);
+        }
+    }
 
-            if color_scheme == "follow" {
-                style_manager.set_color_scheme(ColorScheme::Default);
-            } else if color_scheme == "light" {
-                style_manager.set_color_scheme(ColorScheme::ForceLight);
-            } else if color_scheme == "dark" {
-                style_manager.set_color_scheme(ColorScheme::ForceDark);
-            }
+    fn show_preferences(&self) {
+        let window = self.active_window().unwrap();
+
+        BmicalculatorPreferences::new().present(Some(&window));
     }
 
     fn show_about(&self) {
@@ -164,6 +169,14 @@ impl BmicalculatorApplication {
 
         let entry_weight = &bmi_calculator_window.imp().entry_weight.get();
         let entry_height = &bmi_calculator_window.imp().entry_height.get();
+
+        if entry_weight.text() == "" && entry_height.text() == "" {
+            // Force validation if we have no data
+            let _ = entry_weight.delegate().unwrap().notify("text");
+            let _ = entry_height.delegate().unwrap().notify("text");
+            return;
+        }
+
         let gender = &bmi_calculator_window.imp().gender.get();
 
         let weight = &entry_weight.text().parse::<f32>().unwrap();
@@ -258,3 +271,4 @@ impl BmicalculatorApplication {
     }
 
 }
+
