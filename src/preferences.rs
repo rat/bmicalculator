@@ -117,6 +117,7 @@ mod imp {
 
                     bmi_calculator_window.imp().entry_height.delegate().unwrap().notify("text");
                     bmi_calculator_window.imp().entry_weight.delegate().unwrap().notify("text");
+                    bmi_calculator_window.imp().gender.get().notify("selected");
                 }
             });
 

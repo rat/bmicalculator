@@ -22,5 +22,9 @@
       <default>''</default>
       <summary>Height</summary>
     </key>
+	  <key name="gender" type="i">
+      <default>0</default>
+      <summary>Gender</summary>
+    </key>
   </schema>
 </schemalist>

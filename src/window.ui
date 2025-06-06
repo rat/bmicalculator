@@ -105,6 +105,7 @@
                         <child>
                           <object class="AdwComboRow" id="gender">
                             <property name="title" translatable="yes">Gender</property>
+                            <signal name="notify::selected" handler="gender_selected" swapped="true" />
                             <property name="model">
                               <object class="GtkStringList" id="gender_list">
                                 <items>

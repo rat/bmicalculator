@@ -25,6 +25,7 @@ use gtk::{gio, glib};
 use crate::IsA;
 use glib::ParamSpec;
 use gio::Settings;
+use adw::prelude::ComboRowExt;
 
 enum Value {
     Int(isize),
@@ -89,8 +90,18 @@ mod imp {
                 let weight = settings.get::<String>("weight");
                 let _ = &self.entry_weight.set_text(&weight);
 
+                // Force validation for new values
+
                 let _ = &self.entry_height.delegate().unwrap().notify("text");
                 let _ = &self.entry_weight.delegate().unwrap().notify("text");
+
+                let gender = settings.get::<i32>("gender");
+
+                if gender == 0 {
+                    let _ = &self.gender.set_selected(0);
+                } else {
+                    let _ = &self.gender.set_selected(1);
+                }
             }
         }
     }
@@ -141,6 +152,21 @@ impl BmicalculatorWindow {
         Self::validate_calculate_button(&self);
     }
 
+    #[template_callback]
+    fn gender_selected(&self,  _param: ParamSpec, gender: adw::ComboRow) {
+        let settings = Settings::new("io.github.johannesboehler2.BmiCalculator");
+
+        if true == settings.get("remember-entries") {
+            let gender_index_value = &gender.property_value ("selected");
+            let gender_index_int: u32 = gender_index_value.get::<u32>().unwrap();
+
+            if gender_index_int == 0 {
+                let _ = settings.set_int("gender", 0);
+            } else {
+                let _ = settings.set_int("gender", 1);
+            }
+        }
+    }
 
     fn validate_entry(&self, _param: ParamSpec, current_entry: adw::EntryRow) {
         match Self::parse_string(&current_entry.text().to_string()) {
