@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: bmicalculator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-16 23:43+0200\n"
-"PO-Revision-Date: 2025-06-08 13:47+0200\n"
+"PO-Revision-Date: 2025-06-08 22:32+0200\n"
 "Last-Translator: Johannes Böhler\n"
 "Language-Team: german\n"
 "Language: de\n"
@@ -44,11 +44,11 @@ msgstr "Dunkler Stil"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:58
 msgid "Obese"
-msgstr ""
+msgstr "Übergewichtig"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:62
 msgid "Underweight"
-msgstr ""
+msgstr "Untergewichtig"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:69
 msgid "Two columns layout for landscape mode"
@@ -56,19 +56,19 @@ msgstr ""
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:74
 msgid "Scrollable content"
-msgstr ""
+msgstr "Scrollbarer Inhalt"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:79
 msgid "First public release"
-msgstr ""
+msgstr "Erste Veröffentlichung"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:84
 msgid "Add new app icon"
-msgstr ""
+msgstr "Neues App-Symbol hinzugefügt"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:89
 msgid "Initial release"
-msgstr ""
+msgstr "Erstveröffentlichung"
 
 #: src/window.ui:31
 msgid "Menu"
