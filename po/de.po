@@ -1,0 +1,163 @@
+# GERMAN TRANSLATION.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the bmicalculator package.
+# Johannes Böhler, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bmicalculator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-16 23:43+0200\n"
+"PO-Revision-Date: 2025-06-08 13:47+0200\n"
+"Last-Translator: Johannes Böhler\n"
+"Language-Team: german\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: data/io.github.johannesboehler2.BmiCalculator.desktop.in:2
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:6
+msgid "BMI Calculator"
+msgstr "BMI Calculator"
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:7
+msgid "Calculate your BMI"
+msgstr "Berechne deinen BMI"
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:14
+msgid "Johannes Böhler"
+msgstr "Johannes Böhler"
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:31
+msgid "Calculate your body mass index from weight, height and gender."
+msgstr "Berechne deinen body mass index aus Gewicht, Größe und Geschlecht."
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:50
+msgid "Light style"
+msgstr "Heller Stil"
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:54
+msgid "Dark style"
+msgstr "Dunkler Stil"
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:58
+msgid "Obese"
+msgstr ""
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:62
+msgid "Underweight"
+msgstr ""
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:69
+msgid "Two columns layout for landscape mode"
+msgstr ""
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:74
+msgid "Scrollable content"
+msgstr ""
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:79
+msgid "First public release"
+msgstr ""
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:84
+msgid "Add new app icon"
+msgstr ""
+
+#: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:89
+msgid "Initial release"
+msgstr ""
+
+#: src/window.ui:31
+msgid "Menu"
+msgstr "Menü"
+
+#: src/window.ui:45
+msgid "Calculate"
+msgstr "Berechnen"
+
+#: src/window.ui:84
+msgid "Weight (in kg)"
+msgstr "Gewicht (in kg)"
+
+#: src/window.ui:91
+msgid "Height (in cm)"
+msgstr "Größe (in cm)"
+
+#: src/window.ui:98
+msgid "Gender"
+msgstr "Geschlecht"
+
+#: src/window.ui:124
+msgid "0"
+msgstr "0"
+
+#: src/window.ui:305
+msgid "18.5"
+msgstr "18,5"
+
+#: src/window.ui:326
+msgid "25.0"
+msgstr "25,0"
+
+#: src/window.ui:347
+msgid "30.0"
+msgstr "30,0"
+
+#: src/window.ui:368
+msgid "35.0"
+msgstr "35,0"
+
+#: src/window.ui:389
+msgid "40.0"
+msgstr "40,0"
+
+#: src/window.ui:454
+msgid "_Male"
+msgstr "_Männlich"
+
+#: src/window.ui:457
+msgid "_Female"
+msgstr "_Weiblich"
+
+#: src/window.ui:547
+msgid "_Preferences"
+msgstr "_Einstellungen"
+
+#: src/window.ui:465
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastaturkürzel"
+
+#: src/window.ui:469
+msgid "_About BMI Calculator"
+msgstr "Über BMI Calculator"
+
+#: src/preferences.ui:13
+msgid "Appearance"
+msgstr "Aussehen"
+
+#: src/preferences.ui:38
+msgid "Behavior"
+msgstr "Verhalten"
+
+#: src/preferences.ui:16
+msgid "Theme"
+msgstr "Thema"
+
+#: src/preferences.ui:26
+msgid "Follow System"
+msgstr "System"
+
+#: src/preferences.ui:27
+msgid "Light"
+msgstr "Hell"
+
+#: src/preferences.ui:28
+msgid "Dark"
+msgstr "Dunkel"
+
+#: src/preferences.ui:41
+msgid "Remember entries"
+msgstr "Eingaben erhalten"

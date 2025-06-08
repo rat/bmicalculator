@@ -13,7 +13,7 @@
             <property name="title" translatable="yes">Appearance</property>
             <child>
               <object class="AdwComboRow" id="color_scheme_row">
-                <property name="title" translatable="yes">_Theme</property>
+                <property name="title" translatable="yes">Theme</property>
                 <property name="use-underline">True</property>
                 <child type="prefix">
                   <object class="GtkImage">
