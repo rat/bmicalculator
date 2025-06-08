@@ -122,6 +122,10 @@ msgstr "Uomo"
 msgid "_Female"
 msgstr "Donna"
 
+#: src/window.ui:547
+msgid "_Preferences"
+msgstr ""
+
 #: src/window.ui:465
 msgid "_Keyboard Shortcuts"
 msgstr "_Scorciatoie da tastiera"
@@ -129,3 +133,31 @@ msgstr "_Scorciatoie da tastiera"
 #: src/window.ui:469
 msgid "_About BMI Calculator"
 msgstr "Informazioni su Calcolatore BMI"
+
+#: src/preferences.ui:13
+msgid "Appearance"
+msgstr ""
+
+#: src/preferences.ui:38
+msgid "Behavior"
+msgstr ""
+
+#: src/preferences.ui:16
+msgid "Theme"
+msgstr ""
+
+#: src/preferences.ui:26
+msgid "Follow System"
+msgstr ""
+
+#: src/preferences.ui:27
+msgid "Light"
+msgstr ""
+
+#: src/preferences.ui:28
+msgid "Dark"
+msgstr ""
+
+#: src/preferences.ui:41
+msgid "Remember entries"
+msgstr ""
