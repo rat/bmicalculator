@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: bmicalculator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-16 23:43+0200\n"
-"PO-Revision-Date: 2025-06-08 22:32+0200\n"
+"PO-Revision-Date: 2025-06-08 22:48+0200\n"
 "Last-Translator: Johannes Böhler\n"
 "Language-Team: german\n"
 "Language: de\n"
@@ -52,7 +52,7 @@ msgstr "Untergewichtig"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:69
 msgid "Two columns layout for landscape mode"
-msgstr ""
+msgstr "Zwei-Spalten-Layout für Querformat"
 
 #: data/io.github.johannesboehler2.BmiCalculator.metainfo.xml.in:74
 msgid "Scrollable content"
