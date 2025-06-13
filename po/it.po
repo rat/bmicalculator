@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: bmicalculator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-16 23:43+0200\n"
-"PO-Revision-Date: 2025-04-21 21:58+0100\n"
+"PO-Revision-Date: 2025-06-13 22:58+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: italian\n"
 "Language: it\n"
@@ -124,7 +124,7 @@ msgstr "Donna"
 
 #: src/window.ui:547
 msgid "_Preferences"
-msgstr ""
+msgstr "_Preferenze"
 
 #: src/window.ui:465
 msgid "_Keyboard Shortcuts"
@@ -136,28 +136,28 @@ msgstr "Informazioni su Calcolatore BMI"
 
 #: src/preferences.ui:13
 msgid "Appearance"
-msgstr ""
+msgstr "Aspetto"
 
 #: src/preferences.ui:38
 msgid "Behavior"
-msgstr ""
+msgstr "Comportamento"
 
 #: src/preferences.ui:16
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: src/preferences.ui:26
 msgid "Follow System"
-msgstr ""
+msgstr "Segui il sistema"
 
 #: src/preferences.ui:27
 msgid "Light"
-msgstr ""
+msgstr "Chiaro"
 
 #: src/preferences.ui:28
 msgid "Dark"
-msgstr ""
+msgstr "Scuro"
 
 #: src/preferences.ui:41
 msgid "Remember entries"
-msgstr ""
+msgstr "Ricorda voci"
