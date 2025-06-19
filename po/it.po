@@ -134,6 +134,10 @@ msgstr "_Scorciatoie da tastiera"
 msgid "_About BMI Calculator"
 msgstr "Informazioni su Calcolatore BMI"
 
+#: src/preferences.ui:8
+msgid "Preferences"
+msgstr "Preferenze"
+
 #: src/preferences.ui:13
 msgid "Appearance"
 msgstr "Aspetto"

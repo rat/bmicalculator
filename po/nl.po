@@ -135,6 +135,10 @@ msgstr "_Sneltoetsen"
 msgid "_About BMI Calculator"
 msgstr "Over BMI-rekenm_achine"
 
+#: src/preferences.ui:8
+msgid "Preferences"
+msgstr ""
+
 #: src/preferences.ui:13
 msgid "Appearance"
 msgstr ""
