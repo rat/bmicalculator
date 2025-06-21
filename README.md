@@ -50,6 +50,15 @@ Two columns layout for landscape mode
 ![Smartphone landscape](data/screenshots/screenshot-dark-phone-landscape.png)
 
 
+## Screenshots Purism Librem 5
+
+![](data/screenshots/screenshot-dark-about_L5.png)
+![](data/screenshots/screenshot-dark-normal-weight-l5.png)
+![](data/screenshots/screenshot-dark-obese-L5.png)
+![](data/screenshots/screenshot-light-about-L5.png)
+![](data/screenshots/screenshot-light-normal-weight-L5.png)
+![](data/screenshots/screenshot-light-obese-L5.png)
+
 
 
 by Johannes Böhler
