@@ -165,3 +165,24 @@ msgstr "Dunkel"
 #: src/preferences.ui:41
 msgid "Remember entries"
 msgstr "Eingaben erhalten"
+
+#: src/application.rs:231
+msgid "Normal range"
+msgstr ""
+
+#: src/application.rs:239
+msgid "Overweight"
+msgstr ""
+
+#: src/application.rs:247
+msgid "Obese (Class I)"
+msgstr ""
+
+#: src/application.rs:255
+msgid "Obese (Class II)"
+msgstr ""
+
+#: src/application.rs:263
+msgid "Obese (Class III)"
+msgstr ""
+
