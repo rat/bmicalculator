@@ -281,23 +281,35 @@ impl BmicalculatorApplication {
 
         // Set the DGE result text
 
-        let mut bmi_result_description_dge = "";
+        let mut bmi_result_description_dge: String = "".to_string();
 
         if (bmi_result < 20.0 && gender_index_int == 0) || (bmi_result < 19.0 && gender_index_int == 1) {
-            bmi_result_description_dge = "<span color='#7c7cfc' weight='normal'>Underweight</span>\n<span size='x-small'>DGE</span>";
+            bmi_result_description_dge.push_str("<span color='#7c7cfc' weight='normal'>");
+            bmi_result_description_dge.push_str(&gettext("Underweight"));
+            bmi_result_description_dge.push_str("</span>\n<span size='x-small'>DGE</span>");
         } else if (bmi_result >= 20.0 && bmi_result <= 24.9 && gender_index_int == 0) || (bmi_result >= 19.0 && bmi_result <= 23.9 && gender_index_int == 1) {
-            bmi_result_description_dge= "<span color='#00aa00' weight='normal'>Normal range</span>\n<span size='x-small'>DGE</span>";
+            bmi_result_description_dge.push_str("<span color='#00aa00' weight='normal'>");
+            bmi_result_description_dge.push_str(&gettext("Normal range"));
+            bmi_result_description_dge.push_str("</span>\n<span size='x-small'>DGE</span>");
         } else if (bmi_result >= 25.0 && bmi_result <= 29.9 && gender_index_int == 0) || (bmi_result >= 24.0 && bmi_result <= 29.9 && gender_index_int == 1) {
-            bmi_result_description_dge = "<span color='#e7b632' weight='normal'>Overweight</span>\n<span size='x-small'>DGE</span>";
+            bmi_result_description_dge.push_str("<span color='#e7b632' weight='normal'>");
+            bmi_result_description_dge.push_str(&gettext("Overweight"));
+            bmi_result_description_dge.push_str("</span>\n<span size='x-small'>DGE</span>");
         } else if bmi_result >= 30.0 && bmi_result <= 34.9 {
-            bmi_result_description_dge = "<span color='#ff8b66' weight='normal'>Obese (Class I)</span>\n<span size='x-small'>DGE</span>";
+            bmi_result_description_dge.push_str("<span color='#ff8b66' weight='normal'>");
+            bmi_result_description_dge.push_str(&gettext("Obese (Class I)"));
+            bmi_result_description_dge.push_str("</span>\n<span size='x-small'>DGE</span>");
         } else if bmi_result >= 35.0 && bmi_result <= 39.9 {
-            bmi_result_description_dge = "<span color='#ee6080' weight='normal'>Obese (Class II)</span>\n<span size='x-small'>DGE</span>";
+            bmi_result_description_dge.push_str("<span color='#ee6080' weight='normal'>");
+            bmi_result_description_dge.push_str(&gettext("Obese (Class II)"));
+            bmi_result_description_dge.push_str("</span>\n<span size='x-small'>DGE</span>");
         } else if bmi_result >= 40.0 {
-            bmi_result_description_dge = "<span color='#dd2599' weight='normal'>Obese (Class III)</span>\n<span size='x-small'>DGE</span>";
+            bmi_result_description_dge.push_str("<span color='#dd2599' weight='normal'>");
+            bmi_result_description_dge.push_str(&gettext("Obese (Class III)"));
+            bmi_result_description_dge.push_str("</span>\n<span size='x-small'>DGE</span>");
         }
 
-        let _ = &bmi_calculator_window.imp().bmi_result_description_dge.set_markup(bmi_result_description_dge);
+        let _ = &bmi_calculator_window.imp().bmi_result_description_dge.set_markup(&bmi_result_description_dge);
 
     }
 
