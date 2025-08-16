@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: bmicalculator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-16 23:43+0200\n"
-"PO-Revision-Date: 2025-06-13 22:58+0100\n"
+"PO-Revision-Date: 2025-08-16 16:38+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: italian\n"
 "Language: it\n"
@@ -168,20 +168,20 @@ msgstr "Ricorda voci"
 
 #: src/application.rs:231
 msgid "Normal range"
-msgstr ""
+msgstr "Intervallo normale"
 
 #: src/application.rs:239
 msgid "Overweight"
-msgstr ""
+msgstr "Sovrappeso"
 
 #: src/application.rs:247
 msgid "Obese (Class I)"
-msgstr ""
+msgstr "Obeso (Classe I)"
 
 #: src/application.rs:255
 msgid "Obese (Class II)"
-msgstr ""
+msgstr "Obeso (Classe II)"
 
 #: src/application.rs:263
 msgid "Obese (Class III)"
-msgstr ""
+msgstr "Obeso (Classe III)"
